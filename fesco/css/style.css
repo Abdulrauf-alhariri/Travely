@@ -4,6 +4,25 @@
 }
 /* End Variables  */
 
+/* Start Component  */
+.main-heading {
+  padding: 10px;
+  text-align: center;
+}
+
+.main-heading h2 {
+  font-size: 5.5rem;
+  font-weight: normal;
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 50px;
+}
+
+.main-heading p {
+  color: #777;
+}
+
+/* End Component  */
+
 /* Start Global Rules  */
 * {
   -webkit-box-sizing: border-box;
@@ -20,7 +39,7 @@ html {
 
 body {
   font-family: "Vollkorn", serif;
-  background-color: black;
+  font-size: 1.5rem;
 }
 
 .container {
@@ -211,8 +230,9 @@ header .container .toggle-menu span {
   font-weight: normal;
   font-family: "Dancing Script", cursive;
   margin: 50px 0 10px 0;
+  color: var(--main-color);
 }
-.landing .container .text h2 {
+.landing .container .text h3 {
   font-size: 2rem;
   font-weight: normal;
 }
