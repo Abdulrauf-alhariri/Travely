@@ -5,7 +5,6 @@
 /* End Variables  */
 
 /* Start Global Rules  */
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -13,6 +12,7 @@
   padding: 0;
   margin: 0;
 }
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -20,7 +20,7 @@ html {
 
 body {
   font-family: "Vollkorn", serif;
-  background: black;
+  background-color: black;
 }
 
 .container {
@@ -58,6 +58,10 @@ li {
 /* End Global Rules  */
 /* Start Header  */
 header {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
 }
 header .container {
   display: flex;
@@ -112,11 +116,11 @@ header .container nav ul {
     padding: 15px;
   }
 }
-
+/* Modivingeng the nav links  */
 header .container nav ul li a {
   color: white;
   display: block;
-  padding: 40px 10px;
+  padding: 40px 15px;
   text-decoration: none;
   transition: all 0.3s;
 }
@@ -128,6 +132,7 @@ header .container nav ul li a:hover {
   z-index: 2;
 }
 
+/* The menue icon  */
 header .container span.toggle-menu {
   display: block;
   display: flex;
@@ -154,5 +159,65 @@ header .container .toggle-menu span {
   width: 100%;
   margin-bottom: 10px;
 }
-
 /* End Header  */
+/* Start Landing  */
+.landing {
+  min-height: 100vh;
+  background: #1f2021;
+  background-image: url("../images/Loading.jpg");
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+
+.landing::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0 0 0 / 50%);
+}
+
+.landing .content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.landing .container .text {
+  width: 550px;
+  max-width: 100%;
+}
+
+.landing .container .text {
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .landing .container .text {
+    text-align: center;
+  }
+}
+.landing .container .text i {
+  font-size: 40px;
+  width: 100%;
+  text-align: center;
+}
+.landing .container .text h1 {
+  font-size: 5.5rem;
+  font-weight: normal;
+  font-family: "Dancing Script", cursive;
+  margin: 50px 0 10px 0;
+}
+.landing .container .text h2 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+.landing .container .text p {
+  font-size: 1.5rem;
+  margin: 40px 0 0 0;
+}
+/* End Landing  */
