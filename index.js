@@ -1,10 +1,8 @@
 let btn = document.getElementById("btn");
-let show = 0;
-let time = setInterval(function () {
-  console.log(show);
-  show++;
-}, 1000);
+
 btn.onclick = function () {
   "use strict";
-  clearInterval(time);
+  window.scrollTo(500, 250);
+  console.log("Window x " + window.scrollX);
+  console.log("Window  y " + window.scrollY);
 };
