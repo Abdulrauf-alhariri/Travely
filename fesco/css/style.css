@@ -1,12 +1,13 @@
 /* Start Variables  */
 :root {
   --main-color: #bf9e7b;
+  --secondary-color: #141723;
+  --sec-padding: 100px;
 }
 /* End Variables  */
 
 /* Start Component  */
 .main-heading {
-  padding: 10px;
   text-align: center;
 }
 
@@ -17,8 +18,13 @@
   margin-bottom: 50px;
 }
 
+.main-color {
+  color: var(--main-color);
+}
+
 .main-heading p {
   color: #777;
+  margin-bottom: 60px;
 }
 
 /* End Component  */
@@ -241,3 +247,243 @@ header .container .toggle-menu span {
   margin: 40px 0 0 0;
 }
 /* End Landing  */
+/* Start About  */
+.about {
+  padding-top: var(--sec-padding);
+  padding-bottom: var(--sec-padding);
+  position: relative;
+}
+
+.about .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 992px) {
+  .about .container {
+    flex-direction: column;
+  }
+}
+
+/* Styling the about text  */
+.about .container .text {
+  flex-basis: 55%;
+}
+
+.about .container .text p {
+  margin-bottom: 30px;
+  line-height: 2;
+}
+.about .container .text h2 {
+  color: var(--main-color);
+}
+
+/* Styling the contact card  */
+.about .container .contact {
+  flex-basis: 35%;
+  position: relative;
+  padding-top: 120px;
+}
+
+.about .container .contact .contact-box {
+  padding: 20px;
+  background-color: var(--secondary-color);
+  color: white;
+
+  position: absolute;
+}
+
+/* Change the position type on small screens  */
+@media (max-width: 992px) {
+  .about .container .contact .contact-box {
+    position: inherit;
+  }
+}
+
+/* Change the text aling on small devices */
+@media (max-width: 992px) {
+  .about .container .contact .contact-box {
+    text-align: center;
+  }
+}
+
+/* Position on medium screens  */
+@media (min-width: 992px) {
+  .about .container .contact .contact-box {
+    top: -50%;
+  }
+}
+
+/* Position on medium screens  */
+@media (min-width: 1200px) {
+  .about .container .contact .contact-box {
+    top: -42%;
+  }
+}
+
+.about .container .contact .contact-box h3 {
+  color: var(--main-color);
+
+  font-weight: normal;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.about .container .contact .contact-box h4 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.about .container .contact .contact-box p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.about .container .contact .contact-box p:nth-of-type(3) {
+  margin-bottom: 5px;
+}
+.about .container .contact a {
+  text-decoration: none;
+  color: white;
+}
+.about .container .contact .contact-box a.map-link {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+.about .container .contact .contact-box a.reservation-link {
+  display: block;
+  color: white;
+
+  border: 1px solid var(--main-color);
+  width: fit-content;
+  padding: 10px 15px;
+  margin: 0 auto;
+}
+.about .container .contact img {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .about .container .contact img {
+    display: none;
+  }
+}
+/* End About  */
+/* Start Specialities  */
+.specialities {
+  padding-top: var(--sec-padding);
+  padding-bottom: var(--sec-padding);
+  background-image: url("../images/specialities.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.specialities::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 60%);
+}
+
+.specialities .container {
+  position: relative;
+}
+
+.specialities .container .main-heading h2 {
+  color: white;
+}
+.specialities .imgs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.specialities .container .box {
+  position: relative;
+  overflow: hidden;
+}
+.specialities .container .box img {
+  width: 100%;
+}
+.specialities .imgs-container .box .caption {
+  text-align: center;
+  color: var(--main-color);
+  padding: 20px 0;
+  background-color: white;
+  transition: 0.3s;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: -100%;
+}
+
+.specialities .container .box:hover .caption {
+  bottom: 0;
+}
+
+/* End Specialities  */
+/* Start Menu  */
+.menu {
+  padding-top: var(--sec-padding);
+  padding-bottom: var(--sec-padding);
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.menu .container .main-heading p {
+  color: white;
+}
+.menu .menu-container h3 {
+  text-align: center;
+  color: var(--main-color);
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-family: "Raleway", sans-serif;
+  margin: 50px 0;
+}
+
+.menu .menu-container .box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.menu .menu-container .box .dishes {
+  flex-basis: 45%;
+}
+.menu .menu-container .box .dishes h4 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.menu .menu-container .box .dishes p {
+  font-size: 1.3rem;
+  font-weight: normal;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+.menu .menu-container .box .dishes p span.price {
+  display: block;
+  text-align: right;
+  color: var(--main-color);
+  font-size: 3.4rem;
+}
+
+.menu .menu-container .box .dishes p span.price::before {
+  content: "$";
+}
+
+.menu .btn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 15px 40px;
+  background-color: var(--main-color);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+/* End Menu  */
