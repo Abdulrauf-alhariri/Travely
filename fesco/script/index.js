@@ -14,3 +14,15 @@ menu.onclick = function () {
     // Removing the bottom of the border
   }
 };
+
+// Showing the rest of the menu
+let menuButton = document.getElementById("btn");
+let menuHeading = document.getElementById("extra-heading");
+let menuBox = document.getElementById("extra-box");
+
+menuButton.onclick = function () {
+  "use strict";
+
+  menuHeading.classList.toggle("toggle--expanded");
+  menuBox.classList.toggle("toggle--expanded");
+};
