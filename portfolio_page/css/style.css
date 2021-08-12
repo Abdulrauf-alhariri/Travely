@@ -1,0 +1,146 @@
+/* Global Rules  */
+:root {
+  --main-color: #464e90;
+  --secondary-color: #ff3946;
+}
+html {
+  font-size: 62.5%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+  color: black;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Small  */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium  */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large  */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+/* End Global Rules  */
+
+/* Start Header  */
+header {
+  display: flex;
+  align-items: center;
+  color: var(--main-color);
+  /* position: relative; */
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  min-height: 97px;
+  align-items: center;
+  position: relative;
+}
+header img {
+  width: 60px;
+}
+
+/* @media (min-width: 1200px) {
+  header .container a.logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+} */
+header .container nav {
+  display: flex;
+}
+@media (min-width: 767px) {
+  header .container nav i {
+    display: none;
+  }
+}
+header .container a {
+  text-decoration: none;
+
+  font-size: 1.8rem;
+}
+
+header .container nav ul {
+  display: flex;
+  padding: 0;
+}
+
+header .container nav ul a {
+  display: block;
+  padding: 4rem 1rem;
+}
+
+header .container .contact {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+header .container .contact a::after {
+  content: "->";
+
+  margin-left: 5px;
+  color: var(--secondary-color);
+}
+
+header .container .contact form {
+  margin-right: 20px;
+}
+header .container .contact form select {
+  border: none;
+  color: var(--main-color);
+  font-size: 1.8rem;
+  outline: none;
+}
+header .container .contact a {
+  display: block;
+  border: 1px solid #777;
+  padding: 10px 20px;
+  outline: none;
+  color: var(--secondary-color);
+  box-shadow: 2px 5px 10px 0 #ddd;
+  border: none;
+}
+
+/* End Header  */
+/*  */
