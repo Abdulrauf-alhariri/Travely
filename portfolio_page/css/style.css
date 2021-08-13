@@ -2,19 +2,23 @@
 :root {
   --main-color: #464e90;
   --secondary-color: #ff3946;
+  --sec-padding: 80px;
 }
 html {
   font-size: 62.5%;
 }
 
 * {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
   font-family: "Work Sans", sans-serif;
   color: black;
+  font-size: 1.8rem;
 }
 
 .container {
@@ -22,6 +26,9 @@ body {
   padding: 0 15px;
 }
 
+.hidden {
+  display: none;
+}
 /* Small  */
 @media (min-width: 768px) {
   .container {
@@ -55,92 +62,191 @@ h2 {
   font-size: 2rem;
 }
 
-p {
-  font-size: 1.5rem;
-}
 /* End Global Rules  */
 
 /* Start Header  */
 header {
-  display: flex;
-  align-items: center;
   color: var(--main-color);
-  /* position: relative; */
 }
-
-header .container {
+header .nav {
   display: flex;
   justify-content: space-between;
   min-height: 97px;
   align-items: center;
+
+  padding: 0 2rem;
   position: relative;
 }
+
 header img {
   width: 60px;
 }
 
-/* @media (min-width: 1200px) {
-  header .container a.logo {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-} */
-header .container nav {
+header nav {
   display: flex;
 }
-@media (min-width: 767px) {
-  header .container nav i {
+header nav .menu {
+  display: flex;
+  flex-direction: column;
+  width: 40px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+header nav .menu span {
+  width: 100%;
+  height: 4px;
+  margin-bottom: 8px;
+  background-color: black;
+}
+@media (min-width: 992px) {
+  header nav .menu {
     display: none;
   }
 }
-header .container a {
+header a {
   text-decoration: none;
 
   font-size: 1.8rem;
 }
 
-header .container nav ul {
+header nav ul {
   display: flex;
   padding: 0;
+  transition: 0.3s;
+}
+/* Styling the sided nav bar  */
+@media (max-width: 992px) {
+  header nav ul {
+    display: none;
+  }
+
+  header nav ul a {
+    padding-right: 2rem;
+    transition: 0.5s;
+  }
+
+  header nav ul a:hover {
+    margin-left: 1rem;
+  }
+
+  header .collapsible--expanded ul.collapsible-content {
+    background-color: whitesmoke;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+  }
 }
 
-header .container nav ul a {
+header nav ul a {
   display: block;
   padding: 4rem 1rem;
 }
 
-header .container .contact {
+header .contact {
   display: flex;
   align-items: center;
   position: relative;
 }
 
-header .container .contact a::after {
+@media (max-width: 992px) {
+  header .contact {
+    display: none;
+  }
+}
+
+header .contact a::after {
   content: "->";
 
   margin-left: 5px;
   color: var(--secondary-color);
 }
 
-header .container .contact form {
+header .contact form {
   margin-right: 20px;
 }
-header .container .contact form select {
+header .contact form select {
   border: none;
   color: var(--main-color);
   font-size: 1.8rem;
   outline: none;
 }
-header .container .contact a {
-  display: block;
+header .contact a {
   border: 1px solid #777;
-  padding: 10px 20px;
-  outline: none;
-  color: var(--secondary-color);
-  box-shadow: 2px 5px 10px 0 #ddd;
   border: none;
+  box-shadow: 2px 5px 10px 0 #ddd;
+  color: var(--secondary-color);
+  display: block;
+  outline: none;
+  padding: 10px 20px;
 }
 
 /* End Header  */
-/*  */
+/* Start Loading  */
+.loading {
+  padding-top: var(--sec-padding);
+  padding-bottom: var(--sec-padding);
+}
+
+.loading .container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  .loading .container {
+    flex-direction: row;
+  }
+}
+.loading .container .content {
+  flex-basis: 50%;
+}
+.loading .container .content h1 {
+  color: var(--main-color);
+  font-size: 6.3rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 0;
+}
+
+@media (min-width: 1200px) {
+  .loading .container .content h1 {
+    font-size: 7.3rem;
+  }
+}
+.loading .container .content p {
+  color: #777;
+  line-height: 2;
+  margin: 50px 0;
+}
+.loading .container .content a {
+  background-color: var(--secondary-color);
+  border-radius: 75px 75px;
+  color: white;
+  margin-right: 20px;
+  padding: 2rem 4rem;
+  text-decoration: none;
+}
+.loading .container .content span {
+  color: var(--main-color);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Modify the image  */
+.loading .container .image {
+  background-image: url("../images/illustration_background.png");
+  background-size: cover;
+}
+
+@media (min-width: 900px) {
+}
+.loading .container .image img {
+  width: 100%;
+}
+/* End Loading  */
+Start Services

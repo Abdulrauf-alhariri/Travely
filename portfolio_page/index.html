@@ -16,19 +16,20 @@
     />
   </head>
   <body>
+    <!-- Start Header  -->
     <header>
-      <div class="container">
-        <a href="#">
+      <div class="nav">
+        <a href="#" class="logo">
           <img src="images/logo.png" alt="Logo" />
         </a>
-        <nav>
-          <i class="fas fa-bars"></i>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#" class="active">Contact us</a></li>
+        <nav id="navId">
+          <span class="menu"><span></span><span></span><span></span></span>
+          <ul class="navList collapsible-content">
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#" class="nav-link">About us</a></li>
+            <li><a href="#" class="nav-link">Portfolio</a></li>
+            <li><a href="#" class="nav-link">Blog</a></li>
+            <li><a href="#" class="active nav-link">Contact us</a></li>
           </ul>
         </nav>
         <div class="contact">
@@ -42,5 +43,53 @@
         </div>
       </div>
     </header>
+    <!-- End Header  -->
+    <!-- Start Loading  -->
+    <div class="loading">
+      <div class="container">
+        <div class="content">
+          <h1>The Spirit of Digital Agency.</h1>
+          <p>
+            Vestibulum ac diam sit amet quam vehicula elementum amet est on dui.
+            Nulla porttitor accumsan tincidunt.
+          </p>
+          <a href="#">More About Us</a><span>Get in Touch</span>
+        </div>
+        <div class="image">
+          <img
+            src="images/Phone maintenance_Isometric.png"
+            alt="Social  Image"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- End Loading  -->
+    <!-- Start Services  -->
+    <div class="services">
+      <div class="container">
+        <div class="content">
+          <h1>Anything you need,we’ve got you covered</h1>
+          <a href="#">Get in Touch</a>
+        </div>
+        <div class="service">
+          <img src="icons/suitcase.svg" alt="suitcase image" />
+          <h2>Web & Graphic Design</h2>
+          <p>
+            Vestibulum ac diam sit amet quam vehicula elementum amet est on dui.
+            Nulla porttitor accumsan tincidunt.
+          </p>
+        </div>
+        <div class="service">
+          <img src="icons/card.svg" alt="bank card image" />
+          <h2>Web & App Development</h2>
+          <p>
+            Vestibulum ac diam sit amet quam vehicula elementum amet est on dui.
+            Nulla porttitor accumsan tincidunt.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- End Services  -->
+    <script src="script/index.js"></script>
   </body>
 </html>
