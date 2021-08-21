@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfoli</title>
-    <link rel="stylesheet" href="../normalize.css" />
+    <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,10 +26,10 @@
           <span class="menu"><span></span><span></span><span></span></span>
           <ul class="navList collapsible-content">
             <li><a href="#" class="nav-link">Home</a></li>
-            <li><a href="#" class="nav-link">About us</a></li>
-            <li><a href="#" class="nav-link">Portfolio</a></li>
-            <li><a href="#" class="nav-link">Blog</a></li>
-            <li><a href="#" class="active nav-link">Contact us</a></li>
+            <li><a href="#about" class="nav-link">About us</a></li>
+            <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+            <li><a href="#blog" class="nav-link">Blog</a></li>
+            <li><a href="#contact" class="active nav-link">Contact us</a></li>
           </ul>
         </nav>
         <div class="contact">
@@ -39,7 +39,7 @@
               <option value="2">SV</option>
             </select>
           </form>
-          <a href="#">Contact Us</a>
+          <a href="#contact">Contact Us</a>
         </div>
       </div>
     </header>
@@ -95,7 +95,7 @@
     </div>
     <!-- End Services  -->
     <!-- Start About Company  -->
-    <div class="company">
+    <div id="about" class="company">
       <div class="container">
         <img src="images/company.svg" alt="Company svg" />
         <div class="content">
@@ -113,38 +113,104 @@
     </div>
     <!-- End About Company  -->
     <!-- Start Gallary  -->
-    <div class="gallary">
+    <div id="portfolio" class="gallary">
       <div class="container">
         <div class="main-heading">
           <h2>See some of our Creative work.</h2>
           <p></p>
         </div>
         <div class="img-container">
-          <div class="box">
-            <img src="images/gallary_1.jpg" alt="img" />
+          <div class="flip-card-container">
+            <div class="flip-card">
+              <div class="flip-card-front">
+                <img src="images/gallary_1.jpg" alt="img" />
+              </div>
+              <div class="flip-card-back">
+                <p><strong>Best product</strong></p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Debitis, quia!
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="box">
-            <img src="images/gallary_2.jpg" alt="img" />
+          <div class="flip-card-container">
+            <div class="flip-card">
+              <div class="flip-card-front">
+                <img src="images/gallary_2.jpg" alt="img" />
+              </div>
+              <div class="flip-card-back">
+                <p><strong>Best product</strong></p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Debitis, quia!
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="box">
-            <img src="images/gallary_3.jpg" alt="img" />
+          <div class="flip-card-container">
+            <div class="flip-card">
+              <div class="flip-card-front">
+                <img src="images/gallary_3.jpg" alt="img" />
+              </div>
+              <div class="flip-card-back">
+                <p><strong>Best product</strong></p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Debitis, quia!
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="box">
-            <img src="images/gallary_4.jpg" alt="img" />
+          <div class="flip-card-container">
+            <div class="flip-card">
+              <div class="flip-card-front">
+                <img src="images/gallary_4.jpg" alt="img" />
+              </div>
+              <div class="flip-card-back">
+                <p><strong>Best product</strong></p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Debitis, quia!
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="box">
-            <img src="images/gallary_5.jpg" alt="img" />
+          <div class="flip-card-container">
+            <div class="flip-card">
+              <div class="flip-card-front">
+                <img src="images/gallary_5.jpg" alt="img" />
+              </div>
+              <div class="flip-card-back">
+                <p><strong>Best product</strong></p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Debitis, quia!
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="box">
-            <img src="images/gallary_6.jpg" alt="img" />
+          <div class="flip-card-container">
+            <div class="flip-card">
+              <div class="flip-card-front">
+                <img src="images/gallary_6.jpg" alt="img" />
+              </div>
+              <div class="flip-card-back">
+                <p><strong>Best product</strong></p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Debitis, quia!
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <p>See More of These.</p>
+        <p class="secondary-color">See More of These.</p>
       </div>
     </div>
     <!-- End Gallary  -->
     <!-- Start blog -->
-    <div class="blog">
+    <div id="blog" class="blog">
       <div class="container">
         <div class="main-heading">
           <p>Blog Stories</p>

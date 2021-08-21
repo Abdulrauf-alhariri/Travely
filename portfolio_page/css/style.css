@@ -6,6 +6,7 @@
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -60,6 +61,10 @@ li {
 
 h2 {
   font-size: 2rem;
+}
+
+.secondary-color {
+  color: var(--secondary-color);
 }
 
 /* End Global Rules  */
@@ -454,6 +459,45 @@ header .contact a {
   padding-bottom: var(--sec-padding);
 }
 
+.gallary .img-container .flip-card-container {
+  height: 300px;
+
+  perspective: 1000px;
+}
+
+.gallary .img-container .flip-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.gallary .flip-card-container:hover .flip-card {
+  transform: rotateY(180deg);
+}
+
+.gallary .flip-card-front,
+.gallary .flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.gallary .flip-card-back {
+  background-color: var(--main-color);
+  color: whitesmoke;
+  text-align: center;
+  padding: 2rem;
+  transform: rotateY(180deg);
+}
+
+.gallary .flip-card-back p {
+  color: whitesmoke;
+  margin-top: 20px;
+  line-height: 1.5;
+}
 .gallary .img-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -461,13 +505,13 @@ header .contact a {
   margin: 40px 0 20px 0;
 }
 
-.gallary .img-container img {
+.gallary .flip-card img {
+  height: 100%;
   width: 100%;
 }
 
 .gallary .container p:last-child {
   text-align: center;
-  color: var(--secondary-color);
   font-weight: 600;
 }
 /* End Gallary  */
@@ -590,6 +634,9 @@ header .contact a {
   background-color: var(--main-color);
   color: whitesmoke;
 }
+.footer p {
+  text-transform: uppercase;
+}
 .footer h2 {
   font-weight: bold;
   text-transform: uppercase;
@@ -614,5 +661,4 @@ header .contact a {
 .footer .icons i {
   margin-right: 20px;
 }
-
 /* End Footer  */
